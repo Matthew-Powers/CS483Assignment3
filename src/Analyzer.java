@@ -136,10 +136,10 @@ public class Analyzer
    {
       System.out.println("Body: " + bodyAID);
       System.out.println("\nTime: " + finishingTimeBodyA);
-      System.out.println("\nDistance: " + (Math.abs(xBodyAInitial - xBodyAFinal) + Math.abs(yBodyAInitial - yBodyAFinal)));
+      System.out.println("\nDistance: " + (Math.sqrt((Math.exp(xBodyAInitial - xBodyAFinal) + Math.exp(yBodyAInitial - yBodyAFinal)))));
       System.out.println("\nVelocity");
-      System.out.println("  min: " + Double.min(vxBodyAMin, vyBodyAMin));
-      System.out.println("  max: " + Double.max(vxBodyAMax, vyBodyAMax));
+      System.out.println("  min: " + Math.sqrt(Math.exp(vxBodyAMin) + Math.exp(vyBodyAMin)));
+      System.out.println("  max: " + Math.sqrt(Math.exp(vxBodyAMax) + Math.exp(vyBodyAMax)));
       System.out.println("  avg: " + "");
    }
 }
